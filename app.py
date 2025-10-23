@@ -23,9 +23,13 @@ for movies in data:
     if movies["year"] == int(pick3):
         print(movies["title"]) """
 
-type=input("Search for the movie you want")
+""" type=input("Search for the movie you want")
 def search(x):
     for movies in data:
         if type.lower() == movies["title"].lower():
             print(movies["title"])
-search(type)
+search(type) """
+
+type2=input("Pick your genre")
+def genre():
+    for movies in data:
