@@ -1,21 +1,21 @@
 def late(x):
     late=x[0]
-    next_num=0
-    waiting=0
+    next_num=x[0] + 1 
+    waiting=x[0]
     done = False
     while done == False:
         for events in x:
             if events == "take":
                 late += 1
-                waiting = late
+                waiting += 1 
+                next_num += 1 
+                if next_num > 999:
+                    next_num = 1 
             elif events == "serve":
-                waiting -= 1
+                waiting -= 1 
             elif events == "close":
-                next_num = late + 1
-                if next_num == 1000:
-                    next_num = 1
-                print(late,waiting,next_num)
-                late = waiting
+                print(late, waiting,next_num)
+                late = 0
             elif events == "EOF":
                 done = True
         
