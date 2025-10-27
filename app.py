@@ -10,7 +10,7 @@ data = json.load(movies)
 """ pick0=int(input("What Year do you want your movies to go after?"))
 for movies in data:
     if movies["year"] > int(pick0):
-        print(movies['title']) """
+        print(movies["title"]) """
 #File 3
 """ pick1=int(input("What Year do you want your movies to go after?"))
 pick2=int(input("What Year do you want your movies to go before"))
@@ -33,8 +33,6 @@ search(type) """
 """ type2=input("Pick your genre")
 def genre(x):
     for movies in data:
-        if x in movies['genres']:
-            print(movies['title'])
+        if x in movies["genres"]:
+            print(movies["title"])
 genre(type2) """
-
-            
