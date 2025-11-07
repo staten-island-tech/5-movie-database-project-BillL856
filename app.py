@@ -23,12 +23,16 @@ for movies in data:
     if movies["year"] == int(pick3):
         print(movies["title"]) """
 #File 5
-""" type=input("Search for the movie you want")
+type=input("Search for the movie you want")
 def search(x):
+    stein=False
     for movies in data:
         if type.lower() == movies["title"].lower():
             print(movies["title"])
-search(type) """
+            stein=True
+    if stein!=True:
+        print(f"There isn't a movie with {x} in it")
+search(type) 
 #File 6
 """ type2=input("Pick your genre")
 def genre(x):
